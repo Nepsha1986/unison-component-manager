@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <MainHeader/>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 pt-5 pb-5">
+          <StartThemeBlock/>
+        </div>
+
+        <div class="col-12 pt-5 pb-5">
+          <UnysonComponentsList/>
+        </div>
+      </div>
+    </div>
+
+    <MainFooter/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import UnysonComponentsList from './components/UnysonComponentsList'
+import StartThemeBlock from './components/StartThemeBlock'
+import MainHeader from './components/MainHeader.vue'
+import MainFooter from './components/MainFooter.vue'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
+      UnysonComponentsList, MainHeader, MainFooter, StartThemeBlock
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
