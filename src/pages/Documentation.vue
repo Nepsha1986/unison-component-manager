@@ -22,7 +22,7 @@
                     <div class="content-part pb-2 pt-2">
                         <h2 class="mb-4 text-uppercase" >Getting started</h2>
                         <blockquote class="blockquote">
-                            The official guide assumes intermediate level knowledge of HTML, CSS, Wordpress, PHP and JavaScript.
+                            This guide assumes intermediate level knowledge of HTML, CSS, Wordpress, PHP and JavaScript.
                             If you haven’t - grasp the basics then come back!
                         </blockquote>
 
@@ -67,8 +67,8 @@
                             <router-link to="/components">Components Page</router-link> and download all the components
                             you need on your website and unzip them in <code>unison-based-starter-theme/framework-customizations/extensions/shortcodes/shortcodes/</code> folder.
                             After that run <code>npm run prod</code> command for production or <code>npm run dev</code>
-                             for developement mode. This commands will compile all *.scss and *.js files of all components to a single
-                            *.css file and *.js file.
+                             for developement mode in the root of Unyson based start theme. This commands will compile
+                            all *.scss and *.js files of all components to a single *.css file and *.js file.
                         </p>
                     </div>
                 </div>
