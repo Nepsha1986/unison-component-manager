@@ -1,9 +1,9 @@
 <template>
     <header class="main-header">
         <div class="container">
-            <h1>
-                <a class="navbar-brand" href="/">Unyson Components manager</a>
-            </h1>
+            <div class="logo">
+                <h1><router-link to="/">UCLM</router-link></h1>
+            </div>
 
             <div class="nav">
                 <ul class="top-nav">
@@ -58,8 +58,14 @@
                     background: #fff;
                 }
             }
+        }
 
-
+        h1 {
+            a {
+                &:after {
+                  display: none !important;
+                }
+            }
         }
 
         .top-nav {
