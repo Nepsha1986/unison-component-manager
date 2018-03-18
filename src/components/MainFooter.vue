@@ -1,7 +1,7 @@
 <template>
     <div class="main-footer">
         <div class="container">
-            <p>I <i class="fas fa-heart"></i> <a href="http://unyson.io/" target="_blank">Unyson Framework</a></p>
+            <p>Made with <i class="fas fa-heart"></i> and passion</p>
         </div>
     </div>
 </template>
