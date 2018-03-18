@@ -1,84 +1,61 @@
 <template>
     <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1><router-link to="/">UCLM</router-link></h1>
+        <div class="container-fluid">
+            <div class="mobile-btn" @click="$emit('onClickNavBtn')">
+                <i class="fas fa-bars"></i>
             </div>
 
-            <div class="nav">
-                <ul class="top-nav">
-                    <li class="top-nav-item">
-                        <router-link to="/">Home</router-link>
-                    </li>
-
-                    <li class="top-nav-item">
-                        <router-link to="/components">Components</router-link>
-                    </li>
-
-                    <li class="top-nav-item">
-                        <router-link to="/start-theme">Start Theme</router-link>
-                    </li>
-
-                    <li class="top-nav-item">
-                        <router-link to="/documentation">Documentation</router-link>
-                    </li>
-                </ul>
+            <div class="logo">
+                <h1><router-link to="/">UCLM</router-link></h1>
             </div>
         </div>
     </header>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                navIsVisible: false
+            }
+        },
+
+        props: [ 'navigationIsActive']
+    }
+</script>
 
 <style lang="scss">
     .main-header {
         background: #007bff;
         color: #fff;
 
-        .container  {
+        .container-fluid {
             padding: 1rem 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        a {
-            color: #fff;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-        .router-link-active {
-            &.router-link-exact-active {
-                &:after {
-                    display: block;
-                    content: '';
-                    height: 2px;
-                    margin: 0 auto;
-                    background: #fff;
-                }
-            }
-        }
-
         h1 {
+            margin-bottom: 0;
+            line-height: 1em;
+
             a {
+                color: #fff;
+
                 &:after {
                   display: none !important;
                 }
             }
         }
 
-        .top-nav {
-            margin: 0;
-            padding: 0;
+        .fa-bars {
+            width: 32px;
+            height: 32px;
         }
 
-        .top-nav-item {
-            display: inline-block;
-
-            &:not(:last-child) {
-                margin-right: 2rem;
-            }
+        .mobile-btn {
+            cursor: pointer;
         }
     }
 </style>
