@@ -1,7 +1,11 @@
 <template>
     <div class="main-navigation-wrapper" :class="{ 'is-active': navigationIsActive }">
-        <header>
-            <h2>UCLM</h2>
+        <header class="d-flex justify-content-between">
+            <h2>MENU</h2>
+
+            <div class="mobile-btn" @click.stop="$emit('onClickNavBtn')">
+                <i class="fas fa-bars"></i>
+            </div>
         </header>
 
         <nav class="main-navigation">
@@ -96,7 +100,7 @@
         }
 
         header {
-            text-align: center;
+            text-align: left;
             padding: 1rem;
             color: #fff;
             border-bottom: 2px solid #ababab;
@@ -104,6 +108,12 @@
             h2 {
                 margin-bottom: 0;
             }
+        }
+
+        .fa-bars {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
         }
 
         footer {

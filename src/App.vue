@@ -3,7 +3,7 @@
         <div class="wrap" :class="{ 'shifted': navigationIsActive }">
             <MainHeader
                     :navigationIsActive="navigationIsActive"
-                    @onClickNavBtn = "navigationIsActive == false ? navigationIsActive = true : navigationIsActive = false"
+                    @onClickNavBtn = "toggleNavigation"
             />
             <router-view></router-view>
             <MainFooter/>
@@ -11,6 +11,7 @@
 
         <MainNavigation
                 :navigationIsActive="navigationIsActive"
+                @onClickNavBtn = "toggleNavigation"
         />
     </div>
 </template>
@@ -34,7 +35,9 @@
         },
 
         methods: {
-
+            toggleNavigation() {
+                this.navigationIsActive == false ? this.navigationIsActive = true : this.navigationIsActive = false;
+            }
         }
     }
 </script>

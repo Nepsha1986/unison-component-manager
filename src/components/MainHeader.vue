@@ -1,7 +1,7 @@
 <template>
     <header class="main-header">
         <div class="container-fluid">
-            <div class="mobile-btn" @click="$emit('onClickNavBtn')">
+            <div v-if="!navigationIsActive" class="mobile-btn" @click="$emit('onClickNavBtn')">
                 <i class="fas fa-bars"></i>
             </div>
 
@@ -42,6 +42,12 @@
 
             a {
                 color: #fff;
+                transition: .3s;
+
+                &:hover {
+                    text-decoration: none;
+                    text-shadow: 0 0 3px #fff;
+                }
 
                 &:after {
                   display: none !important;
