@@ -20,6 +20,7 @@
     import MainHeader from './components/MainHeader.vue'
     import MainFooter from './components/MainFooter.vue'
     import MainNavigation from './components/MainNavigation.vue'
+    import router from './router'
 
     export default {
         name: 'App',
@@ -37,7 +38,19 @@
         methods: {
             toggleNavigation() {
                 this.navigationIsActive == false ? this.navigationIsActive = true : this.navigationIsActive = false;
+            },
+
+            closeNavigation() {
+                this.navigationIsActive = false;
             }
+        },
+
+        beforeCreate(){
+            let self = this;
+
+            router.afterEach(function () {
+                self.closeNavigation();
+            })
         }
     }
 </script>
